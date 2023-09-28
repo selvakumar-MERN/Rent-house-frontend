@@ -5,9 +5,9 @@ import Mycontext from '../../Context';
 
 
 function Profile(props) {
-    const {userdata}=useContext(Mycontext)
-    const[editable,setedit]=useState(true)
-    const users= {
+   // const {userdata}=useContext(Mycontext)
+   // const[editable,setedit]=useState(true)
+   // const users= {
         name:"selv",
         email:"nkenkend",
         address:"ndekdnkdn",
