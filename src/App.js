@@ -28,7 +28,7 @@ function App() {
 
 
   return (
-    
+      <UserProvider>
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<Landingpage />} />
@@ -52,7 +52,7 @@ function App() {
 
         </Routes>
       </BrowserRouter>
-    
+  </UserProvider>
 
   );
 }
