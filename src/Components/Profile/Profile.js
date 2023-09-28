@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react';
+import React, {  useState } from 'react';
 import Usernav from '../Landingpage/Usernav';
 import './Profile.css'
-import Mycontext from '../../Context';
+//import Mycontext from '../../Context';
 
 
 function Profile(props) {
