@@ -8,13 +8,13 @@ function Profile(props) {
    // const {userdata}=useContext(Mycontext)
    // const[editable,setedit]=useState(true)
    // const users= {
-        name:"selv",
-        email:"nkenkend",
-        address:"ndekdnkdn",
-        state:"djdnjdn",
-        city:"",
-        zip:""
-    }
+    //    name:"selv",
+    //    email:"nkenkend",
+    //    address:"ndekdnkdn",
+   //     state:"djdnjdn",
+   //     city:"",
+   //     zip:""
+   // }
     const[user,setuser]=useState(props.userdata)
   
 
