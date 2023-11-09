@@ -1,0 +1,35 @@
+
+ul{
+    font-weight: 1000;
+}
+.logbtn{
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    margin-left: 2px;
+    outline: none;
+}
+.navbar .dropdown-toggle::after{
+    color: aqua;
+}
+.navbar-toggler{
+    background-color: white;
+}
+.cart{
+    position: relative;
+}
+.supertext{
+    padding: 3px;
+    color: white;
+    position: absolute;
+    bottom: 7px;
+    border-radius: 35%;
+    background-color: red;
+    font-size: 12px;
+    
+}
+@media (min-width:320px) and (max-width:480px){
+    .logbtn{
+        margin: 5px 5px;
+    }
+}
