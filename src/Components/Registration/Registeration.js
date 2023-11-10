@@ -10,6 +10,7 @@ function Registeration(props) {
     const [fieldverify, setfield] = useState("")
     const [usermessage, setusermessage] = useState("");
     const [Users, setuser] = useState("")
+    const [load,setload]=useState(true)
 
     useEffect(() => {
         if (window.localStorage.getItem('usertoken')) {
