@@ -1,27 +1,27 @@
-import React, { useContext, useState } from 'react';
+import React, {useState } from 'react';
 import Usernav from '../Landingpage/Usernav';
 import './Profile.css'
-import Mycontext from '../../Context';
+
 
 
 function Profile(props) {
-    const {userdata}=useContext(Mycontext)
-    const[editable,setedit]=useState(true)
-    const users= {
-        name:"selv",
-        email:"nkenkend",
-        address:"ndekdnkdn",
-        state:"djdnjdn",
-        city:"",
-        zip:""
-    }
+  //  const {userdata}=useContext(Mycontext)
+  //  const[editable,setedit]=useState(true)
+  //  const users= {
+  //      name:"selv",
+  //      email:"nkenkend",
+   //     address:"ndekdnkdn",
+   //     state:"djdnjdn",
+   //     city:"",
+   //     zip:""
+   // }
     const[user,setuser]=useState(props.userdata)
   
 
     const handler=(e)=>{
         const {name,value}=e.target
         setuser({...user,[name]:value})
-        console.log(user)
+        
     }
 
     const edit=(e)=>{
