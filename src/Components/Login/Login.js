@@ -97,10 +97,12 @@ function Login(props) {
                                             </div>
                                         </div>
                                         <div className='mt-2'>
-                                            <h5>
+                                            <h6>
                                                 admin email- admin@gmail.com
                                                 password- admin123
-                                            </h5>
+                                                user email- selva@gmail.com
+                                                password- selva123
+                                            </h6>
                                         </div>
 
                                     </form>
