@@ -103,10 +103,7 @@ function Usernav(props) {
                                                 <i className="fas fa-shopping-cart fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 My orders
                                             </Link>}
-                                        <Link to='/profile' className="dropdown-item">
-                                            <i className="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Profile
-                                        </Link>
+                                       
                                         <div className="dropdown-divider"></div>
                                         <Link to='/' className="dropdown-item" href="/" data-toggle="modal" data-target="#logoutModal" onClick={logout}>
                                             <i className="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
