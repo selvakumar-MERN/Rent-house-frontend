@@ -38,18 +38,21 @@ function Registeration(props) {
                 const response = res.data
                 setusermessage("")
                 setfield(response)
+               setload(true)
             })
             .catch((error) => {
-                console.log(error)
+                
                 if (Array.isArray(error.response.data.details)) {
                     setfield("")
                     const { details } = error.response.data
                     const { message } = details[0]
                     setusermessage(message)
+                   setload(true)
                 }
                 else {
                     const response = error.response.data;
                     setusermessage(response)
+                   setload(true)
                 }
             })
     }
