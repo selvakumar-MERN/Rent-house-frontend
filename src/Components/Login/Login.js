@@ -10,6 +10,16 @@ function Login(props) {
     const [error, seterror] = useState("")
     const [users, setuser] = useState({})
 
+        useEffect(() => {
+        if (window.localStorage.getItem('usertoken')) {
+            window.location.href = '/'
+        }
+        else if (window.localStorage.getItem('admintoken')) {
+            window.location.href = '/'
+        }
+
+    }, [])
+
     const handler = (e) => {
         const { name, value } = e.target;
         setuser({ ...users, [name]: value })
