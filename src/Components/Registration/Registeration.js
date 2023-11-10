@@ -89,9 +89,10 @@ function Registeration(props) {
                                         {usermessage !== null ? <span className='text-danger'>{usermessage}</span> : null}
                                         {fieldverify !== null ? <span className='text-success'>{fieldverify}</span> : null}
                                         </div>
-                                        <button onClick={submit} className="formbutton">
-                                            Register
-                                        </button>
+                                         <button onClick={(e)=>{submit(e);setload(false)}} className="btn btn-primary btn-block">
+                                    { load ? <span>Register</span> : <div className='spinner-border text-primary ' role='status'>
+                                             </div>}
+                                    </button>
                                        <div className='loginfooter'>
                                         <span>Already a User ? please <Link to='/login'>Login</Link></span>
                                        </div>
