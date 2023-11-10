@@ -115,7 +115,7 @@ function Adminpage(props) {
                                         {/*Product name*/}
                                         <h6 className="fw-bolder">{items.productName}</h6>
                                         {/*Product price*/}
-                                        <div className="text-decoration-line-through">Rs.{items.productPrice}</div>
+                                        <div className="text-decoration-line-through">Rs.{items.productPrice}/Hr</div>
 
                                     </div>
                                 </div>
