@@ -10,6 +10,17 @@ function Registeration(props) {
     const [fieldverify, setfield] = useState("")
     const [usermessage, setusermessage] = useState("");
     const [Users, setuser] = useState("")
+
+    useEffect(() => {
+        if (window.localStorage.getItem('usertoken')) {
+            window.location.href = '/'
+        }
+        else if (window.localStorage.getItem('admintoken')) {
+            window.location.href = '/'
+        }
+
+    }, [])
+   
     const handler = (e) => {
         const { name, value } = e.target;
         setuser({ ...Users, [name]: value })
