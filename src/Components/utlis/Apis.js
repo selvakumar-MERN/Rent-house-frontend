@@ -1,5 +1,5 @@
 //back-end-host
-const host= 'http://localhost:3030'
+const host= 'https://rent-house-backend.onrender.com'
 
 //user API-ENDPOINTS
 export const login = `${host}/user/login`
