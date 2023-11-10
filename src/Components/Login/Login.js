@@ -5,10 +5,12 @@ import './Login.css'
 import { Link } from 'react-router-dom';
 import { login } from '../utlis/Apis';
 
+
 function Login(props) {
     const [sucess, setsucess] = useState("")
     const [error, seterror] = useState("")
     const [users, setuser] = useState({})
+    const [load,setload]=useState(true)
 
         useEffect(() => {
         if (window.localStorage.getItem('usertoken')) {
@@ -34,11 +36,13 @@ function Login(props) {
                 console.log(res.data.token)
                 if(res.data.user==="admin"){
                         setsucess("Login sucessfull")
+                        setload(true)
                         window.localStorage.setItem("admintoken", res.data.token)
                         window.location.href = "/admin/adminpage"
                 }
                 else{
                 setsucess("Login sucessfull")
+                setload(true)
                 window.localStorage.setItem("usertoken", res.data.token)
                 window.location.href = "/products"
                 
@@ -50,6 +54,7 @@ function Login(props) {
             .catch((error) => {
 
                 setsucess("")
+                setload(true)
                 const { data } = error.response;
 
 
@@ -85,9 +90,10 @@ function Login(props) {
                                             {error !== null ? <span className='text-danger'>{error}</span> : null}
                                             {sucess !== null ? <span className='text-success'>{sucess}</span> : null}
                                         </div>
-                                        <button onClick={submit} className="formbutton">
-                                            Login
-                                        </button>
+                                        <button style={{backgroundColor:"#008260",color:"white"}} onClick={(e)=>{submit(e);setload(false)}} className="btn btn-user btn-block">
+                                    { load ? <span> Login</span> : <div className='spinner-border text-primary ' role='status'>
+                                             </div>}
+                                    </button>
                                         <div className='loginfooter'>
                                             <div >
                                             <span>Not a User ? <Link to='/register'>Register</Link></span>
