@@ -90,7 +90,7 @@ function Login(props) {
                                             {error !== null ? <span className='text-danger'>{error}</span> : null}
                                             {sucess !== null ? <span className='text-success'>{sucess}</span> : null}
                                         </div>
-                                        <button style={{backgroundColor:"#008260",color:"white"}} onClick={(e)=>{submit(e);setload(false)}} className="btn btn-user btn-block">
+                                        <button style={{color:"white"}} onClick={(e)=>{submit(e);setload(false)}} className="btn btn-user btn-block">
                                     { load ? <span> Login</span> : <div className='spinner-border text-primary ' role='status'>
                                              </div>}
                                     </button>
