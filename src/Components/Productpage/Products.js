@@ -61,7 +61,8 @@ function Products() {
     }
     
     const handlerChange = (e) => {
-        setrecords(product.filter(item => item.productName.toLowerCase().includes(e.target.value)))
+        const searchcon= (e.target.value).toLowerCase()
+        setrecords(product.filter(item => item.productName.toLowerCase().includes(searchcon)))
     }
 
   
